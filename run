@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]
+then
+    echo "Type ./run --help"
+    exit
+fi
+
+if [ "$1" = "etl" ]
+then
+    echo "Running etl!"
+    cd app
+    python etl.py
+    cd ..
+    exit
+elif [ "$1" = "app" ]
+then
+    echo "Running app!"
+    cd app
+    export FLASK_APP=whatflix.py
+    flask run
+    exit
+elif [ "$1" = "--help" ]
+then
+    echo "syntax : ./run <option>"
+    echo "Options"
+    echo "  - etl, runs the etl to load the data from the files(./run etl)"
+    echo "  - app, runs the app (./run app)"
+    exit
+else
+    echo "Invalid argument. Type ./run --help"
+fi
