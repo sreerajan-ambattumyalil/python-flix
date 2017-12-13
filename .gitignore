@@ -3,3 +3,4 @@ whatflix_env/
 .idea/
 __pycache__/
 *.log
+WhatFlix.egg-info/

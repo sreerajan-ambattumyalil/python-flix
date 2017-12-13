@@ -1,0 +1,29 @@
+version: "3"
+services:
+  api:
+    image: communist/whatflix
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "8081:8081"
+    networks:
+      - webnet
+  # mongodb:
+  #       image: mongo:3.4.10
+  #       hostname: "mongodb"
+  #       environment:
+  #         - MONGO_DATA_DIR=/data/db
+  #         - MONGO_LOG_DIR=/dev/null
+  #       volumes:
+  #         - ./data/db:/data/db
+  #       expose:
+  #           - "27017"
+  #       restart: always
+networks: 
+  webnet:

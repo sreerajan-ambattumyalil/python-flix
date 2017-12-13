@@ -1,0 +1,15 @@
+LANGUAGE_CODE_ISO = 'iso_639_1'
+SPOKEN_LANGUAGES_FIELD = "spoken_languages"
+LANGUAGES_FIELD = "languages"
+MOVIE_TITLE_FIELD = "title"
+LANGUAGE_CODE_FIELD = "code"
+LANGUAGE_FIELD = "language"
+DELIMITER = ','
+ACTOR_ORDER_CHOICES = [0,1,2]
+DIRECTORS = "directors"
+ACTORS = "actors"
+CREW = "crew"
+CAST_FIELD = "cast"
+MOVIE_ID = "movie_id"
+ID = "id"
+UN_KNOWN = "UnKnown"
