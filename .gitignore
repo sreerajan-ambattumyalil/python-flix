@@ -4,3 +4,4 @@ whatflix_env/
 __pycache__/
 *.log
 WhatFlix.egg-info/
+*.pyc
